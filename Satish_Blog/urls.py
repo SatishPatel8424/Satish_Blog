@@ -32,6 +32,10 @@ from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='/blog/', permanent=True)),
 ]
+# used to login and logout...
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
 
 # Use static() to add url mapping to serve static files during development (only)
 from django.conf import settings
