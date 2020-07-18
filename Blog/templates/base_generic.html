@@ -45,8 +45,8 @@
                 </ul>
                 <ul class="sidebar-nav">
                 {% if user.is_authenticated %}
-                    <div class="card-header">
-                        <li>User: {{ user.get_username }}</li>
+                     <div class="card-header">
+                        <li><a href="#"> UserName: {{ user.get_username }}</a></li>
                     </div>
                     <div class="card-header">
                         <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
