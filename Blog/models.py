@@ -49,7 +49,7 @@ class Blog(models.Model):
 # Blog comment model is here..
 class BlogComment(models.Model):
 
-    description = models.TextField(max_length=2000, help_text="Please Enter the comment about blog here.")
+    description = models.TextField(max_length=75, help_text="Please Enter the comment about blog here.")
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     post_date = models.DateTimeField(auto_now_add=True)
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
