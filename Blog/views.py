@@ -59,5 +59,12 @@ class BlogListbyAuthorView(generic.ListView):
         context['blogger'] = get_object_or_404(BlogAuthor, pk=self.kwargs['pk'])
         return context
 
+class BloggerListView(generic.ListView):
+    """
+    Generic class-based view for a list of bloggers.
+    """
+    model = BlogAuthor
+    paginate_by = 5
+
 
 
